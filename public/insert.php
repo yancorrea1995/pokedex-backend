@@ -11,7 +11,9 @@ require 'connect.php';
 
 		if(!mysqli_query($conn,$query))
 		{
-			echo 'Error. Pokemon not added';	
+			if (isset($_SERVER["HTTP_REFERER"])) {
+		        header("Location: " . $_SERVER["HTTP_REFERER"]);
+		    }	
 		}
     }
 
