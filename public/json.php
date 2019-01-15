@@ -3,6 +3,10 @@
 $json = file_get_contents('https://pokeapi.co/api/v2/pokemon/pikachu/');
 $obj = json_decode($json);
 echo $obj->id;
-echo $obj->types;
+
+
+foreach ($obj->types as $key => $value) {
+    echo $value["slot"] . ", " . $value["type"] . "<br>";
+}
 
 ?>
