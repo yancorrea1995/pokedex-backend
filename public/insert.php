@@ -11,9 +11,15 @@
 		$day = mysqli_real_escape_string($conn,$_POST["day"]);
 	
 
-		$json = file_get_contents("https://pokeapi.co/api/v2/pokemon/"+$name+"/");
-		$obj = json_decode($json);
-		$pokemonid = $obj->id;
+		if($json = file_get_contents("https://pokeapi.co/api/v2/pokemon/"+$name+"/"))
+		{
+			$obj = json_decode($json);
+			$pokemonid = $obj->id;
+		}
+		else
+		{
+			$pokemonid = 55;
+		}
 
 
 		$query = "INSERT INTO captured(pokemonid,name,day) VALUES ('$pokemonid','$name','$day')";
