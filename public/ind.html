@@ -8,7 +8,7 @@ function SubmitFormData() {
     var name = $("#name").val();
     var day = $("#day").val();
     
-    $.post("https://pokedex-back.herokuapp.com/public/teste.php", { name: name, day: day},
+    $.post("http://pokedex-back.herokuapp.com/public/teste.php", { name: name, day: day},
     function(data) {
 	 $('#insert_form')[0].reset();
     });
