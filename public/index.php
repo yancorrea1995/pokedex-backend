@@ -1,7 +1,7 @@
 <?php
 
-mysqli_connect("kavfu5f7pido12mr.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306", "ibdag7lookr1rw9m", "f842guwbrd95et5d", "n68s0e0zvaxksdzy") or die("Error 0101"+mysqli_error());
+mysqli_connect("us-cdbr-iron-east-01.cleardb.net:3306", "be1ac295a270bf", "8b76acd3", "heroku_1f10eb5821ace69") or die(mysqli_error());
 
-echo "Connected to MySQL<br />";
+echo "Conectado ao MySQL<br />";
 
 ?>
