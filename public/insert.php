@@ -18,7 +18,11 @@ require 'connect.php';
 		$obj = json_decode($json);
 		$pokemonid = $obj->id;
 
-		$pokemonid = intval($pokemonid);
+		//$pokemonid = intval($pokemonid);
+
+		console.log($name);
+		console.log($obj);
+		console.log($obj->id);
 
 
 		$query = "INSERT INTO captured(pokemonid,name,day) VALUES ('$pokemonid','$name','$day')";
