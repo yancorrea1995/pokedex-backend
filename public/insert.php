@@ -16,14 +16,10 @@ if(!empty($_POST))
 	{
 		echo 'add ok';
 	}
-	else
-	{
-		echo "Erro inserir"
-	}
 }
 else
 {
-	echo "Erro Vazio";
+	echo die("Erro");
 }
 
 
