@@ -4,8 +4,6 @@ header('Access-Control-Allow-Origin: *');
 require 'connect.php';
     
 
-if(!empty($_POST))
-{
 	$output = '';
 	$name2 = mysqli_real_escape_string($conn,$_POST["name"]);
 	$name = 2;
@@ -15,11 +13,7 @@ if(!empty($_POST))
 
 	mysqli_query($conn,$query) or die(mysqli_error($db));
 
-}
-else
-{
-	echo die("Erro");
-}
+
 
 
 $pokemon = [];
