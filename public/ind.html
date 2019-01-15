@@ -2,15 +2,24 @@
 <title>Submit Form without Page Refresh - PHP/jQuery - TecAdmin.net</title>
 <head>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="js/submit.js"></script>
+<script>
+
+function SubmitFormData() {
+    var name = $("#name").val();
+    var day = $("#day").val();
+    
+    $.post("http://pokedex-back.herokuapp.com/public/insert.php", { name: name, day: day},
+    function(data) {
+	 $('#insert_form')[0].reset();
+    });
+}
+
+</script>
 </head>
 <body>
   <form id="myForm" method="post">
      Name:    <input name="name" id="name" type="text" /><br />
-     Email:   <input name="email" id="email" type="text" /><br />
-     Phone No:<input name="phone" id="phone" type="text" /><br />
-     Gender:  <input name="gender" type="radio" value="male">Male
-	      <input name="gender" type="radio" value="female">Female<br />
+     day:   <input name="day" id="day" type="text" /><br />
 
     <input type="button" id="submitFormData" onclick="SubmitFormData();" value="Submit" />
    </form>
