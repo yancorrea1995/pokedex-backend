@@ -8,7 +8,7 @@ if(!empty($_POST))
 {
 	$output = '';
 	$name = mysqli_real_escape_string($conn,$_POST["name"]);
-	$day = mysqli_real_escape_string($conn,$_POST["day"]);
+	$day = "0000-00-00";
 
 	$query = "INSERT INTO captured(idpokemon,day) VALUES ('$name','$day')";
 
