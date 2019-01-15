@@ -21,7 +21,7 @@
 		}
 		else
 		{
-			$pokemonid = 55;
+			$pokemonid = 0;
 		}
 
 
