@@ -11,14 +11,14 @@ require 'connect.php';
 
 
 		//String To Lower
-		$name = strtolower($name);
+		//$name = strtolower($name);
 
 		//Get pokemon id
 		$json = file_get_contents("https://pokeapi.co/api/v2/pokemon/'$name'/");
 		$obj = json_decode($json);
 		$pokemonid = $obj->id;
 
-
+		$pokemonid = intval($pokemonid);
 
 
 		$query = "INSERT INTO captured(pokemonid,name,day) VALUES ('$pokemonid','$name','$day')";
