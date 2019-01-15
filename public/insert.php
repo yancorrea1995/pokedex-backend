@@ -9,7 +9,7 @@ require 'connect.php';
 	$name = 2;
 	$day = "0000-00-00";
 
-	$query = "INSERT INTO captured(idpokemon,day) VALUES ('$name','$day')";
+	$query = "INSERT INTO captured(pokemonid,name,day) VALUES (25,'$name','$day')";
 
 	mysqli_query($conn,$query) or die(mysqli_error($db));
 
