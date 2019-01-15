@@ -9,7 +9,7 @@ require 'connect.php';
 		$name2 = mysqli_real_escape_string($conn,$_POST["name"]);
 		$name = 'meu nome';
 		$day = "0000-00-00";
-		$query = "INSERT INTO captured(pokemonid,name,day) VALUES (25,'$name','$day')";
+		$query = "INSERT INTO captured(pokemonid,name,day) VALUES ('25','$name','$day')";
 
 		if(mysqli_query($conn,$query))
 		{
