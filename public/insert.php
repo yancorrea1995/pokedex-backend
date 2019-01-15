@@ -7,13 +7,14 @@ require 'connect.php';
 if(!empty($_POST))
 {
 	$output = '';
-	$name = mysqli_real_escape_string($conn,$_POST["name"]);
+	$name2 = mysqli_real_escape_string($conn,$_POST["name"]);
+	$name = 2;
 	$day = "0000-00-00";
 
 	$query = "INSERT INTO captured(idpokemon,day) VALUES ('$name','$day')";
 
 	mysqli_query($conn,$query) or die(mysqli_error($db));
-	
+
 }
 else
 {
