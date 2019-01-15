@@ -16,10 +16,14 @@ if(!empty($_POST))
 	{
 		echo 'add ok';
 	}
+	else
+	{
+		echo "Erro inserir"
+	}
 }
 else
 {
-	echo $conn;
+	echo "Erro Vazio";
 }
 
 
