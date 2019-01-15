@@ -17,6 +17,10 @@ if(!empty($_POST))
 		echo 'add ok';
 	}
 }
+else
+{
+	echo die("Erro");
+}
 
 
 $pokemon = [];
