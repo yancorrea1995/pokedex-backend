@@ -20,6 +20,8 @@ require 'connect.php';
 
 		$pokemonid = intval($pokemonid);
 
+		$pokemonid = 132;
+
 
 		$query = "INSERT INTO captured(pokemonid,name,day) VALUES ('$pokemonid','$name','$day')";
 
