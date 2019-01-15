@@ -1,7 +1,4 @@
-{
 
 "require": {
   "ext-mbstring": "*"
-}
-
 }
