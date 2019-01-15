@@ -5,33 +5,22 @@ require 'connect.php';
     
     if(!empty($_POST))
     {
-		//Load vars
 		$name = mysqli_real_escape_string($conn,$_POST["name"]);
 		$day = mysqli_real_escape_string($conn,$_POST["day"]);
-
-
-		//String To Lower
-		//$name = strtolower($name);
-
-		//Get pokemon id
-		//$json = file_get_contents("https://pokeapi.co/api/v2/pokemon/25/");
-		//$obj = json_decode($json);
-		//$pokemonid = $obj->id;
-		$pokemonid = 25;
-
-		//$pokemonid = intval($pokemonid);
-
-		//console.log($name);
-		//console.log($obj);
-		//console.log($obj->id);
+		$query = "INSERT INTO captured(pokemonid,name,day) VALUES ('25','$name','$day')";
 
 
 
-		$query = "INSERT INTO captured(pokemonid,name,day) VALUES ('$pokemonid','$name','$day')";
+
+
+
+
+
+
 
 		if(!mysqli_query($conn,$query))
 		{
-			echo 'BD Insert Error';	
+			header("location:javascript://history.go(-1)");	
 		}
     }
 
