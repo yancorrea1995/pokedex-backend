@@ -19,7 +19,7 @@ if(!empty($_POST))
 }
 else
 {
-	echo die("Erro");
+	echo $conn;
 }
 
 
