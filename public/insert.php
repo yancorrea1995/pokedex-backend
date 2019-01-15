@@ -10,14 +10,6 @@ require 'connect.php';
 		$query = "INSERT INTO captured(pokemonid,name,day) VALUES ('25','$name','$day')";
 
 
-
-
-
-
-
-
-
-
 		if(!mysqli_query($conn,$query))
 		{
 			console.log("Erro Insert BD");	
