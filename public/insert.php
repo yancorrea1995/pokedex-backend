@@ -10,7 +10,9 @@
 		$name = mysqli_real_escape_string($conn,$_POST["name"]);
 		$day = mysqli_real_escape_string($conn,$_POST["day"]);
 
-		$url = "https://pokeapi.co/api/v2/pokemon/"+$name+"/";
+	
+		$url = "https://pokeapi.co/api/v2/pokemon/".$name."/";
+
 
 		if($json = file_get_contents($url))
 		{
