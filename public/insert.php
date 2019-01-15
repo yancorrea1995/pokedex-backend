@@ -20,8 +20,10 @@ require 'connect.php';
 
 		if(!mysqli_query($conn,$query))
 		{
-			header("location:javascript://history.go(-1)");	
+			console.log("Erro Insert BD");	
 		}
+		else
+			console.log("Saved");
     }
 
 ?>
