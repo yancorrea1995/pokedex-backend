@@ -10,7 +10,7 @@ function SubmitFormData() {
     
     $.post("http://pokedex-back.herokuapp.com/public/teste.php", { name: name, day: day},
     function(data) {
-	 $('#insert_form')[0].reset();
+	 $('#myForm')[0].reset();
     });
 }
 </script>
