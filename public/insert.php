@@ -14,7 +14,7 @@ require 'connect.php';
 		//$name = strtolower($name);
 
 		//Get pokemon id
-		$json = file_get_contents("https://pokeapi.co/api/v2/pokemon/"+$name+"/");
+		$json = file_get_contents("https://pokeapi.co/api/v2/pokemon/25/");
 		$obj = json_decode($json);
 		$pokemonid = $obj->id;
 
