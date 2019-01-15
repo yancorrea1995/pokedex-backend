@@ -11,9 +11,7 @@ require 'connect.php';
 
 		if(!mysqli_query($conn,$query))
 		{
-			if (isset($_SERVER["HTTP_REFERER"])) {
-		        header("Location: " . $_SERVER["HTTP_REFERER"]);
-		    }	
+			header("location:javascript://history.go(-1)");	
 		}
     }
 
