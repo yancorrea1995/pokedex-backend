@@ -29,7 +29,7 @@ require 'connect.php';
 
 		if(!mysqli_query($conn,$query))
 		{
-			die('BD Insert Error');	
+			echo 'BD Insert Error';	
 		}
     }
 
