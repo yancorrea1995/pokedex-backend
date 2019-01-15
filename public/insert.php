@@ -12,10 +12,8 @@ if(!empty($_POST))
 
 	$query = "INSERT INTO captured(idpokemon,day) VALUES ('$name','$day')";
 
-	if (mysqli_query($conn,$query))
-	{
-		echo 'add ok';
-	}
+	mysqli_query($conn,$query) or die(mysqli_error($db));
+	
 }
 else
 {
