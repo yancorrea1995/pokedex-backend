@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: *');
 require 'connect.php';
     
 $pokemon = [];
-$sql = "SELECT id,idpokemon,name,day FROM captured";
+$sql = "SELECT id,pokemonid,name,day FROM captured";
 
 if($result = mysqli_query($conn,$sql))
 {
