@@ -11,7 +11,7 @@
 		$day = mysqli_real_escape_string($conn,$_POST["day"]);
 	
 
-		if($json = file_get_contents("https://pokeapi.co/api/v2/pokemon/"+$name+"/"))
+		if($json = file_get_contents("https://pokeapi.co/api/v2/pokemon/25/"))
 		{
 			$obj = json_decode($json);
 			$pokemonid = $obj->id;
