@@ -16,7 +16,7 @@ if($result = mysqli_query($conn,$sql))
     $cr++;
   }
     
-  echo json_encode(['data'=>$pokemon]);
+  echo json_encode($pokemon);
 }
 else
 {
