@@ -1,13 +1,22 @@
 <?php
 
-header('Access-Control-Allow-Origin: *');
-require 'connect.php';
+	header('Access-Control-Allow-Origin: *');
+	require 'connect.php';
+	ini_set("allow_url_fopen", 1);
+
     
     if(!empty($_POST))
     {
 		$name = mysqli_real_escape_string($conn,$_POST["name"]);
 		$day = mysqli_real_escape_string($conn,$_POST["day"]);
-		$query = "INSERT INTO captured(pokemonid,name,day) VALUES ('25','$name','$day')";
+	
+
+		$json = file_get_contents("https://pokeapi.co/api/v2/pokemon/"+$name+"/");
+		$obj = json_decode($json);
+		$pokemonid = $obj->id;
+
+
+		$query = "INSERT INTO captured(pokemonid,name,day) VALUES ('$pokemonid','$name','$day')";
 
 
 		if(!mysqli_query($conn,$query))
