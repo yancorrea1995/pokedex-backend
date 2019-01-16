@@ -27,14 +27,10 @@
 			$pokemonid = 0;
 		}
 
-
 		$query = "INSERT INTO captured(pokemonid,name,day) VALUES ('$pokemonid','$name','$day')";
 
-
 		if(!mysqli_query($conn,$query))
-		{
 			console.log("Erro Insert BD");	
-		}
 		else
 			console.log("Saved");
     }
