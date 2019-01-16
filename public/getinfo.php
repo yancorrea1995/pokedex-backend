@@ -29,6 +29,12 @@
 	$height = $obj2['height'];
 	$weight = $obj2['weight'];
 
+	$d = count($obj2['types']);
+
+	for ($j=0; $j < $d; $j++) {
+		$pokemon[0]['types'][$j]['name'] = $obj2['types'][$j]['type']['name'];
+	}
+
 
 
 	$pokemon[0]['description'] = $description;
