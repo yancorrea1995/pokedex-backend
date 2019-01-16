@@ -3,10 +3,10 @@
 header('Access-Control-Allow-Origin: *');
 require 'connect.php';
     
-$id = mysqli_real_escape_string($conn,$_POST["id"]);
+//$id = mysqli_real_escape_string($conn,$_POST["id"]);
 
 $pokemon = [];
-$sql = "SELECT id,pokemonid,name,day FROM captured WHERE id='$id'";
+$sql = "SELECT id,pokemonid,name,day FROM captured";
 
 if($result = mysqli_query($conn,$sql))
 {
