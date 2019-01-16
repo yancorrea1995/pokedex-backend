@@ -11,13 +11,13 @@ if($result = mysqli_query($conn,$sql))
   $cr = 0;
   while($row = mysqli_fetch_assoc($result))
   {
-  	$pokemon[$cr]['id']    = $row['id'];
-  	$pokemon[$cr]['pokemonid']    = $row['pokemonid'];
-    $pokemon[$cr]['name']    = $row['name'];
+  	$pokemon[$cr]['id'] = $row['id'];
+  	$pokemon[$cr]['pokemonid'] = $row['pokemonid'];
+    $pokemon[$cr]['name'] = $row['name'];
     $pokemon[$cr]['day'] = $row['day'];
     $cr++;
   }
-    
+  
   echo json_encode($pokemon);
 }
 else
