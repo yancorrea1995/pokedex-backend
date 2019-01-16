@@ -3,12 +3,12 @@
 header('Access-Control-Allow-Origin: *');
 require 'connect.php';
 
-echo $_GET['id'];
+$id = $_GET['id'];
     
 //$id = mysqli_real_escape_string($conn,$_POST["id"]);
 
 $pokemon = [];
-$sql = "SELECT id,pokemonid,name,day FROM captured WHERE id=811";
+$sql = "SELECT id,pokemonid,name,day FROM captured WHERE id=$id";
 
 if($result = mysqli_query($conn,$sql))
 {
