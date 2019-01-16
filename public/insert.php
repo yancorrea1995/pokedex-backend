@@ -16,7 +16,6 @@
 	
 		$url = "https://pokeapi.co/api/v2/pokemon/".$name."/";
 
-
 		if($json = file_get_contents($url))
 		{
 			$obj = json_decode($json);
