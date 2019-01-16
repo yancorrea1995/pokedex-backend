@@ -5,12 +5,6 @@
 
 	$id = $_GET['id'];
 
-	//$json = file_get_contents('https://pokeapi.co/api/v2/pokemon/'.$id.'/');
-	//$obj = json_decode($json);	
-	//$name = $obj->moves[0]->move->name;
-	//echo count($obj->moves);
-	//echo $name;
-
 	$pokemon = [];
 
 	$json = file_get_contents('https://pokeapi.co/api/v2/pokemon-species/'.$id.'/');
@@ -28,11 +22,18 @@
 			$i = $c; //to exit for
 		}
 	}
-
-	
 	$description = $obj['flavor_text_entries'][$languageIndex]['flavor_text'];
+
+	$json2 = file_get_contents('https://pokeapi.co/api/v2/pokemon/'.$id.'/');
+	$obj2 = json_decode($json2,true);
+	$height = $obj2['height'];
+	$weight = $obj2['weight'];
+
+
+
 	$pokemon[0]['description'] = $description;
-	//$pokemon[0]['nome']='Teste';
+	$pokemon[0]['height'] = $height;
+	$pokemon[0]['weight'] = $weight;
 
 	echo json_encode($pokemon);
 
