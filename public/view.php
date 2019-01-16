@@ -6,7 +6,7 @@ require 'connect.php';
 //$id = mysqli_real_escape_string($conn,$_POST["id"]);
 
 $pokemon = [];
-$sql = "SELECT id,pokemonid,name,day FROM captured";
+$sql = "SELECT id,pokemonid,name,day FROM captured WHERE id=811";
 
 if($result = mysqli_query($conn,$sql))
 {
