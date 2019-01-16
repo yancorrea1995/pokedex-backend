@@ -32,7 +32,7 @@
 	$d = count($obj2['types']);
 
 	for ($j=0; $j < $d; $j++) {
-		$pokemon[0]['types'][$j] = $obj2['types'][$j]['type']['name'];
+		$pokemon[0]['types'][$j]['name'] = $obj2['types'][$j]['type']['name'];
 	}
 
 	
