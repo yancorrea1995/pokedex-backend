@@ -18,7 +18,7 @@
 	
 	$description = $obj->flavor_text_entries[2]->flavor_text;
 	$pokemon[0]['description'] = $description;
-	$pokemon[0]['nome']='Teste';
+	//$pokemon[0]['nome']='Teste';
 
 	echo json_encode($pokemon);
 
