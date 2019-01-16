@@ -10,6 +10,9 @@
 		$name = mysqli_real_escape_string($conn,$_POST["name"]);
 		$day = mysqli_real_escape_string($conn,$_POST["day"]);
 
+		//Convert to lowercase
+		$name=strtolower($name);
+
 	
 		$url = "https://pokeapi.co/api/v2/pokemon/".$name."/";
 
