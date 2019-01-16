@@ -2,6 +2,8 @@
 
 header('Access-Control-Allow-Origin: *');
 require 'connect.php';
+
+echo $_GET['id'];
     
 //$id = mysqli_real_escape_string($conn,$_POST["id"]);
 
