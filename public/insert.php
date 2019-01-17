@@ -63,7 +63,7 @@
 		}
 
 		for ($i=0; $i < 16 ; $i++) {
-			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move.$i')";
+			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move$i')";
 
 			if(!mysqli_query($conn,$query2))
 				console.log("Erro Insert BD");	
