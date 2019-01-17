@@ -31,7 +31,6 @@ if($result = mysqli_query($conn,$sql))
     }
 
   }
-
   
   echo json_encode($pokemon);
 }

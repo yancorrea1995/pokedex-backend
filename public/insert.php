@@ -10,6 +10,11 @@
 		$name = mysqli_real_escape_string($conn,$_POST["name"]);
 		$day = mysqli_real_escape_string($conn,$_POST["day"]);
 
+		$move = [];
+		for ($i=0; $i < 16; $i++) { 
+			$move[i] = mysqli_real_escape_string($conn,$_POST['move'.$i]);
+		}
+
 		//Convert to lowercase
 		$name=strtolower($name);
 
@@ -33,12 +38,26 @@
 		else
 			console.log("Saved");
 
-		$query2 = "INSERT INTO moves(capturedid,move) VALUES (LAST_INSERT_ID(),'Movimento1')";
 
-		if(!mysqli_query($conn,$query2))
-			console.log("Erro Insert BD");	
-		else
-			console.log("Saved");
+		//get last id
+		$sql = "SELECT id FROM captured ORDER BY id DESC LIMIT 1";
+		$lastID = 0;
+		if($result = mysqli_query($conn,$sql))
+		{
+		  while($row = mysqli_fetch_assoc($result))
+		  {
+		  	$lastID = $row['id'];
+		  }
+		}
+
+		for ($i=0; $i < 16 ; $i++) {
+			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move[$i]')";
+
+			if(!mysqli_query($conn,$query2))
+				console.log("Erro Insert BD");	
+			else
+				console.log("Saved");
+		}
     }
 
 ?>
