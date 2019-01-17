@@ -30,7 +30,7 @@ if($result = mysqli_query($conn,$sql))
     $index = 0;
     while($row = mysqli_fetch_assoc($result))
     {
-      $pokemon[$cr]['move']['name'] = $row['move'];
+      $pokemon[$cr]['move'][$index]['name'] = $row['move'];
       $index++;
     }
 
