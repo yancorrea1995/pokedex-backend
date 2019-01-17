@@ -62,14 +62,26 @@
 		  }
 		}
 
-		for ($i=0; $i < 16 ; $i++) {
+		if($move0 != '')
+		{
+			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move0')";
+			mysqli_query($conn,$query2);
+		}
+		if($move1 != '')
+		{
+			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move1')";
+			mysqli_query($conn,$query2);
+		}
+
+
+		/*for ($i=0; $i < 16 ; $i++) {
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','move$i')";
 
 			if(!mysqli_query($conn,$query2))
 				console.log("Erro Insert BD");	
 			else
 				console.log("Saved");
-		}
+		}*/
     }
 
 ?>
