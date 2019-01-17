@@ -27,6 +27,7 @@
 	$obj2 = json_decode($json2,true);
 	$height = $obj2['height'];
 	$weight = $obj2['weight'];
+	$name = $obj2['name'];
 
 	$d = count($obj2['types']);
 	$pokemon[0]['types'][0]['count'] = $d; //number of pokemons type
@@ -40,10 +41,10 @@
 	$pokemon[0]['defense'] = $obj2['stats'][3]['base_stat'];
 	$pokemon[0]['attack'] = $obj2['stats'][4]['base_stat'];
 	$pokemon[0]['hp'] = $obj2['stats'][5]['base_stat'];
-	
 	$pokemon[0]['description'] = $description;
 	$pokemon[0]['height'] = $height;
 	$pokemon[0]['weight'] = $weight;
+	$pokemon[0]['name'] = $name;
 
 	echo json_encode($pokemon);
 
