@@ -34,6 +34,8 @@
 		$pokemon[0]['types'][$j+1]['name'] = $obj2['types'][$j]['type']['name'];
 	}
 
+	$pokemon[0]['speed'] = $obj2['stats'][0]['base_stat'];
+
 	
 	$pokemon[0]['description'] = $description;
 	$pokemon[0]['height'] = $height;
