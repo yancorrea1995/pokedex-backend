@@ -26,7 +26,7 @@ if($result = mysqli_query($conn,$sql))
   
   if($result = mysqli_query($conn,$sql2))
   {
-    $pokemon[0]['move'][0]['count'] = 15;
+    $pokemon[0]['move'][0]['count'] = mysqli_num_rows($result);;
     $k = 1;
     while($row = mysqli_fetch_assoc($result))
     {
