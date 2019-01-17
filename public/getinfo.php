@@ -35,6 +35,12 @@
 		$pokemon[0]['types'][$j+1]['name'] = $obj2['types'][$j]['type']['name'];
 	}
 
+	$f = count($obj2['moves']);
+	$pokemon[0]['moves'][0]['count'] = $f; //number of pokemons moves
+	for ($k=0; $k < $f; $k++) {
+		$pokemon[0]['moves'][$k+1]['name'] = $obj2['moves'][$k]['move']['name'];
+	}
+
 	$pokemon[0]['speed'] = $obj2['stats'][0]['base_stat'];
 	$pokemon[0]['spdefense'] = $obj2['stats'][1]['base_stat'];
 	$pokemon[0]['spattack'] = $obj2['stats'][2]['base_stat'];
