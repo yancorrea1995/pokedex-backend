@@ -32,6 +32,13 @@
 			console.log("Erro Insert BD");	
 		else
 			console.log("Saved");
+
+		$query2 = "INSERT INTO moves(capturedid,move) VALUES ('LAST_INSERT_ID()','Movimento1')";
+
+		if(!mysqli_query($conn,$query2))
+			console.log("Erro Insert BD");	
+		else
+			console.log("Saved");
     }
 
 ?>
