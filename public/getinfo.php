@@ -35,11 +35,11 @@
 	}
 
 	$pokemon[0]['speed'] = $obj2['stats'][0]['base_stat'];
-	$pokemon[1]['special-defense'] = $obj2['stats'][1]['base_stat'];
-	$pokemon[2]['special-attack'] = $obj2['stats'][2]['base_stat'];
-	$pokemon[3]['defense'] = $obj2['stats'][3]['base_stat'];
-	$pokemon[4]['attack'] = $obj2['stats'][4]['base_stat'];
-	$pokemon[5]['hp'] = $obj2['stats'][5]['base_stat'];
+	$pokemon[0]['special-defense'] = $obj2['stats'][1]['base_stat'];
+	$pokemon[0]['special-attack'] = $obj2['stats'][2]['base_stat'];
+	$pokemon[0]['defense'] = $obj2['stats'][3]['base_stat'];
+	$pokemon[0]['attack'] = $obj2['stats'][4]['base_stat'];
+	$pokemon[0]['hp'] = $obj2['stats'][5]['base_stat'];
 	
 	$pokemon[0]['description'] = $description;
 	$pokemon[0]['height'] = $height;
