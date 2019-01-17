@@ -23,9 +23,11 @@ if($result = mysqli_query($conn,$sql))
   }
 
   $sql2 = "SELECT move FROM moves WHERE capturedid=$id";
+  
   if($result = mysqli_query($conn,$sql2))
   {
-    $k = 0;
+    $pokemon[0]['move'][0]['count'] = $num_rows = mysql_num_rows($result);
+    $k = 1;
     while($row = mysqli_fetch_assoc($result))
     {
       $pokemon[0]['move'][$k]['name'] = $row['move'];
