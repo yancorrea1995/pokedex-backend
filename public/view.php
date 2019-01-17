@@ -29,6 +29,7 @@ if($result = mysqli_query($conn,$sql))
     while($row = mysqli_fetch_assoc($result))
     {
       $pokemon[0]['move'][$k]['name'] = $row['move'];
+      $k++;
     }
 
   }
