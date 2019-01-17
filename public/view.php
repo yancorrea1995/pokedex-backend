@@ -11,27 +11,23 @@ $pokemon = [];
 $sql = "SELECT id,pokemonid,name,day FROM captured WHERE id=$id";
 
 
-$cr = 0;
 if($result = mysqli_query($conn,$sql))
 {
 
   while($row = mysqli_fetch_assoc($result))
   {
-  	$pokemon[$cr]['id'] = $row['id'];
-  	$pokemon[$cr]['pokemonid'] = $row['pokemonid'];
-    $pokemon[$cr]['name'] = $row['name'];
-    $pokemon[$cr]['day'] = $row['day'];
-    $cr++;
+  	$pokemon[0]['id'] = $row['id'];
+  	$pokemon[0]['pokemonid'] = $row['pokemonid'];
+    $pokemon[0]['name'] = $row['name'];
+    $pokemon[0]['day'] = $row['day'];
   }
 
   $sql2 = "SELECT move FROM moves WHERE capturedid=$id";
   if($result = mysqli_query($conn,$sql2))
   {
-    $index = 0;
     while($row = mysqli_fetch_assoc($result))
     {
-      $pokemon[$cr]['move'][$index]['name'] = $row['move'];
-      $index++;
+      $pokemon[0]['move']['name'] = $row['move'];
     }
 
   }
