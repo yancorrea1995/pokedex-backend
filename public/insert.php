@@ -62,82 +62,82 @@
 		  }
 		}
 
-		if($move0 != '')
+		if($move0 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move0')";
 			mysqli_query($conn,$query2);
 		}
-		if($move1 != '')
+		if($move1 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move1')";
 			mysqli_query($conn,$query2);
 		}
-		if($move2 != '')
+		if($move2 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move2')";
 			mysqli_query($conn,$query2);
 		}
-		if($move3 != '')
+		if($move3 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move3')";
 			mysqli_query($conn,$query2);
 		}
-		if($move4 != '')
+		if($move4 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move4')";
 			mysqli_query($conn,$query2);
 		}
-		if($move5 != '')
+		if($move5 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move5')";
 			mysqli_query($conn,$query2);
 		}
-		if($move6 != '')
+		if($move6 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move6')";
 			mysqli_query($conn,$query2);
 		}
-		if($move7 != '')
+		if($move7 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move7')";
 			mysqli_query($conn,$query2);
 		}
-		if($move8 != '')
+		if($move8 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move8')";
 			mysqli_query($conn,$query2);
 		}
-		if($move9 != '')
+		if($move9 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move9')";
 			mysqli_query($conn,$query2);
 		}
-		if($move10 != '')
+		if($move10 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move10')";
 			mysqli_query($conn,$query2);
 		}
-		if($move11 != '')
+		if($move11 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move11')";
 			mysqli_query($conn,$query2);
 		}
-		if($move12 != '')
+		if($move12 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move12')";
 			mysqli_query($conn,$query2);
 		}
-		if($move13 != '')
+		if($move13 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move13')";
 			mysqli_query($conn,$query2);
 		}
-		if($move14 != '')
+		if($move14 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move14')";
 			mysqli_query($conn,$query2);
 		}
-		if($move15 != '')
+		if($move15 != 'NULL')
 		{
 			$query2 = "INSERT INTO moves(capturedid,move) VALUES ('$lastID','$move15')";
 			mysqli_query($conn,$query2);
